@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact form</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/cd50613dda.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<div class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <div class="wrapper">
+          <div class="typing-demo" id="logo"></div>
+        </div>
+
+        
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Enrollment.html">Enrollment</a></li>
+          <li><a href="Lookup.html">Lookup</a></li>
+          <li><a href="view.html">View</a></li>
+        </ul>
+      </div>
+          
+    <div class="content">
+	<div id="overlay">
+		<form action="/submit" method="post">
+			<h1>Contact Us</h1>
+			
+			<label for="name">Name: </label>
+			<input type="text" id="name" placeholder="Your name">
+			<small class="error"></small>
+			
+			<label for="email">Email: </label>
+			<input type="text" id="email" placeholder="Your email">
+			<small class="error"></small>
+			
+			<label for="message">Message: </label>
+			<textarea id="message" placeholder="Your message" rows="6"></textarea>
+			<small class="error"></small>
+			
+			<div class="center">
+				<input type="submit" value="Send Message">
+				<p id="success"></p>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="footer">
+  <div class="waves">
+	<div class="wave" id="wave1"></div>
+	<div class="wave" id="wave2"></div>
+	<div class="wave" id="wave3"></div>
+	<div class="wave" id="wave4"></div>
+  </div>
+  <div class="footer-content">
+	<p>199/A , Kollupitiya , Colombo , Sri Lanka</p>
+	<p><a href="contactform.html">Contact Us</a></p>
+	<div class="line"></div>
+	<p>&copy; 2023 - Group 7A | All Rights Reserved</p>
+  </div>
+</div>
+
+<script>
+	const textContainer = document.getElementById('logo');
+const text = "EduPrime";
+let index = 0;
+let typing = true;
+let typingSpeed = 300; // Adjust typing speed (in milliseconds)
+
+function updateText() {
+  if (typing) {
+    // Append the next character to the text container
+    textContainer.textContent += text[index];
+    index++;
+
+    // Check if the whole text has been typed
+    if (index >= text.length) {
+      typing = false;
+      
+      // Pause before starting the erase process
+      setTimeout(() => {
+        typingSpeed = 200; // Adjust erasing speed (in milliseconds)
+      }, 1000); // Adjust pause time (in milliseconds)
+    }
+  } else {
+    // Erase the typed text from the text container
+    textContainer.textContent = textContainer.textContent.slice(0, -1);
+    
+    // Check if the text has been completely erased
+    if (textContainer.textContent === "") {
+      typing = true;
+      index = 0;
+      typingSpeed = 250; // Reset typing speed
+    }
+  }
+}
+
+// Call the updateText function with the specified typing speed
+setInterval(updateText, typingSpeed);
+</script>
+</body>
+</html>

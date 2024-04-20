@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome !</title>
+        <link rel="stylesheet" href="Lookup.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://kit.fontawesome.com/cd50613dda.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+      <div class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <div class="wrapper">
+          <div class="typing-demo" id="logo"></div>
+        </div>
+        
+
+        
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Enrollment.html">Enrollment</a></li>
+          <li><a href="Lookup.html">Lookup</a></li>
+          <li><a href="view.html">View</a></li>
+        </ul>
+      </div>
+
+      
+
+      <div class="content">
+
+        <div class="form-container">
+      <h1>Search Student</h1>
+      <form id="searchForm">
+        <h4>Search By ID</h4>
+        <input type="text" id="studentIDInput" placeholder="Enter Student ID">
+        <h4>Search By First Name</h4>
+        <input type="text" id="studentfirstNameInput" placeholder="Enter First Name">
+        <h4>Search By Last Name</h4>
+        <input type="text" id="studentlastNameInput" placeholder="Enter Last Name">
+        <h4>Search By Email</h4>
+        <input type="text" id="studentemailInput" placeholder="Enter Email">
+        <h4>Search By Nearest city</h4>
+        <input type="text" id="studentcityInput" placeholder="Enter City">
+        <h4>Search By Course</h4>
+        <input type="text" id="studentcourseInput" placeholder="Enter Course">
+        <h4>Search By Guardian</h4>
+        <input type="text" id="studentguardianInput" placeholder="Enter Guardian">
+
+        <br>
+        <br>
+        <button type="submit">Search</button>
+
+      </form>
+      <br>
+      
+      <div id="searchResults"></div>
+
+    </div>
+
+      <br>
+      <br>
+
+      <div class="form-container">
+
+      <h1>Delete Student</h1>
+      <form id="deleteForm">
+        <h4>Delete By ID</h4>
+        <input type="text" id="deleteStudentIDInput" placeholder="Enter Student ID">
+        <button type="submit">Delete</button>
+      </form>
+
+      </div>
+
+
+      <br>
+      <br>
+      
+      <div class="form-container">
+      <h1>Update Student</h1>
+      <form id="updateForm">
+        <h4>Enter ID to update</h4>
+        <input type="text" id="updateStudentIDInput" placeholder="Enter Student ID">
+        <br>
+        <h5>Update Email</h5>
+        <input type="text" id="updateEmailInput" placeholder="Enter Email">
+        <br>
+        <h5>Update City</h5>
+        <input type="text" id="updateCityInput" placeholder="Enter City">
+        <br>
+        <h5>Update Guardian</h5>
+        <input type="text" id="updateGuardianInput" placeholder="Enter Guardian">
+        <br>
+        <h5>Update Course</h5>
+        <input type="text" id="updateCourseInput" placeholder="Enter Guardian">
+        <br>
+
+        <button type="submit">Update</button>
+      </form>
+      </div>
+      
+
+
+  </div>
+
+  <br>
+
+  <div class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <div class="footer-content">
+      <p>199/A , Kollupitiya , Colombo , Sri Lanka</p>
+      <p><a href="contactform.html">Contact Us</a></p>
+      <div class="line"></div>
+      <p>&copy; 2023 - Group 7A | All Rights Reserved</p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  
+          
+    
+
+    
+    
+    
+   
+
+          <script src="home.js"></script>
+          <script src="Lookup.js"></script>
+    </body>
+
+</html>

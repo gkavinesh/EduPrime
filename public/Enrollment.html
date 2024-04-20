@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome !</title>
+        <link rel="stylesheet" href="Enrollment.css">
+        <script src="https://kit.fontawesome.com/cd50613dda.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+
+    <body>
+      <div class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <div class="wrapper">
+          <div class="typing-demo" id="logo"></div>
+        </div>
+
+        
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Enrollment.html">Enrollment</a></li>
+          <li><a href="Lookup.html">Lookup</a></li>
+          <li><a href="view.html">View</a></li>
+        </ul>
+      </div>
+          
+    <div class="content">
+      
+        <section class="container">
+            <h1> Registration Form</h1>
+            <form action="http://localhost:3000/api/registration" class="form" method="POST">
+              <div class="input-box">
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="Enter first name" required />
+              </div>
+              <div class="input-box">
+                <label>Last Name</label>
+                <input type="text" name="lastName" placeholder="Enter last name" required />
+              </div>
+            
+              <div class="input-box">
+                <label>Email Address</label>
+                <input type="text" name="email" placeholder="Enter email address" required />
+              </div>
+            
+              <div class="column">
+                <div class="input-box">
+                  <label>Phone Number</label>
+                  <input type="number" name="phoneNumber" placeholder="Enter phone number" required />
+                </div>
+                <div class="input-box">
+                  <label>Birth Date</label>
+                  <input type="date" name="birthDate" placeholder="Enter birth date" required />
+                </div>
+              </div>
+            
+              <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-option">
+                  <div class="gender">
+                    <input type="radio" id="check-male" name="gender" value="male" checked />
+                    <label for="check-male">Male</label>
+                  </div>
+                  <div class="gender">
+                    <input type="radio" id="check-female" name="gender" value="female" />
+                    <label for="check-female">Female</label>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="input-box address">
+                <label>Address</label>
+                <input type="text" name="address1" placeholder="Enter street address" required />
+              </div>
+            
+              <div class="input-box">
+                <label>City</label>
+                <input type="text" name="city" placeholder="Enter your city" required />
+              </div>
+
+              <br>
+            
+              <div class="select-box">
+                <select name="course">
+                  <option hidden>Course</option>
+                  <option value="Information Technology">Information Technology</option>
+                  <option value="Business Management">Business Management</option>
+                  <option value="Electrical Engineering">Electrical Engineering</option>
+                </select>
+              </div>
+            
+              <div class="input-box">
+                <label>Guardian Name</label>
+                <input type="text" name="guardianName" placeholder="Enter Guardian name" required />
+              </div>
+            
+              <button type="submit">Submit</button>
+            </form>
+          </section>
+    </div>
+
+    <div class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <div class="footer-content">
+        <p>199/A , Kollupitiya , Colombo , Sri Lanka</p>
+        <p><a href="contactform.html">Contact Us</a></p>
+        <div class="line"></div>
+        <p>&copy; 2023 - Group 7A | All Rights Reserved</p>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+  $('form').submit(function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Serialize the form data
+    const formData = $(this).serialize();
+
+    // Make an AJAX request to the API endpoint
+    $.ajax({
+  type: 'POST',
+  url: '/api/registration', // Update the URL to point to the correct server endpoint
+  data: formData,
+  success: function(response) {
+    console.log(response); // Output the response from the server
+    // Handle the response as needed
+
+    // Display an alert
+    alert('Registration successful');
+
+    // Redirect to another page
+    window.location.href = 'home.html';
+  },
+  error: function(error) {
+    console.error(error); // Output any errors
+    // Handle the error as needed
+  }
+});
+
+  });
+});
+
+
+    </script>
+      
+    
+
+          <script src="home.js"></script>
+    </body>
+
+</html>

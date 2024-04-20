@@ -1,0 +1,21 @@
+{
+  "name": "eduprime",
+  "version": "1.0.0",
+  "description": "kavin",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.1",
+    "jsonwebtoken": "^9.0.0",
+    "nodemailer": "^6.9.3"
+  },
+  "devDependencies": {}
+}

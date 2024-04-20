@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Prompt:ital@1&display=swap');
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+  }
+
+
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 15px 100px;
+	background: #ffcc00;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	z-index: 2; /* Increase z-index value */
+  }
+  .nav,
+  .nav .nav-links {
+	display: flex;
+	align-items: center;
+  }
+  .nav {
+	justify-content: space-between;
+  }
+  a {
+	color: #353842;
+	text-decoration: none;
+	padding: 10px;
+  }
+  a:hover{
+	  color: crimson;
+  }
+  
+  .wrapper {
+	height: auto;
+	display: grid;
+	place-items: center;
+	margin-left:-80rem;
+  
+  }
+  
+  
+  .typing-demo {
+	width: 9ch;
+	animation: typing 4s steps(22), blink 20s step-end infinite alternate;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid;
+	font-family: Prompt;
+	font-size: 1.5em;
+	
+  }
+  
+  
+  @keyframes typing {
+	from {
+	  width: 0
+	}
+  }
+	  
+  @keyframes blink {
+	50% {
+	  border-color: transparent
+	}
+  }
+  
+  
+  .nav .nav-links {
+	column-gap: 10px;
+	list-style: none;
+  }
+  .nav .nav-links a {
+	transition: all 0.2s linear;
+  }
+  
+  .content {
+	height: 150vh;
+	color: black;
+	position: relative;
+	z-index: 1;
+	padding: 100px 0;
+	position: relative;
+	overflow: hidden;
+	background-image: linear-gradient(#ffcc008e, #3586ff96);
+	
+  }
+
+
+
+form{
+	max-width: 550px;
+	width: 90%;
+	background: white;
+	margin: 17vh auto 0 auto;
+	padding: 40px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	margin-top: 4rem;
+}
+
+h1{
+	margin: 0;
+	text-align: center;
+}
+
+label{
+	display: block;
+	margin: 20px 0;
+}
+
+input,textarea{
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	resize: none;
+	border: none;
+	border-bottom: 1px solid #D3D3D3;
+}
+
+input[type="text"]:focus, textarea:focus {
+	border-bottom: 1px solid #000000;
+}
+
+text-area::-webkit-scrollbar {
+	width: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb{
+	background-color:#B78788;
+}
+
+.center{
+	text-align: center;
+}
+
+input[type="submit"]{
+	margin-top: 30px;
+	width: 90%;
+	max-width: 200px;
+	background: linear-gradient(to right, #ffffff);
+	color: rgb(0, 0, 0);
+	font-size: 17px;
+	cursor:pointer;
+	border-radius: 3px;
+}
+
+.error{
+	color:#BD7D7E;
+}
+
+.error-border{
+	border-bottom: 1px #CA7A7B;
+}
+
+#success{
+	color: #B34C8D;
+}
+
+.footer {
+	position: relative;
+	width: 100%;
+	background: #3586ff;
+	min-height: 100px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .footer p {
+	color: #fff;
+	margin: 15px 0 10px 0;
+	font-size: 1rem;
+	font-weight: 300;
+  }
+  
+  .wave {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url("https://i.ibb.co/wQZVxxk/wave.png");
+	background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+	z-index: 10;
+	opacity: 1;
+	bottom: 0;
+	animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+	z-index: 9;
+	opacity: 0.5;
+	bottom: 10px;
+	animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+	z-index: 10;
+	opacity: 0.2;
+	bottom: 15px;
+	animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+	z-index: 9;
+	opacity: 0.7;
+	bottom: 20px;
+	animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+	0% {
+	  background-position-x: 1000px;
+	}
+	100% {
+	  background-position-x: 0px;
+	}
+  }
+  
+  @keyframes animate {
+	0% {
+	  background-position-x: -1000px;
+	}
+	100% {
+	  background-position-x: 0px;
+	}
+  }
+  
+  .footer-content {
+	max-width: 800px;
+	margin: 0 auto;
+  }
+
+  .social-icons {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 10px;
+  }
+  
+  .social-icons li {
+	display: inline-block;
+	margin-right: 10px;
+  }
+  
+  .social-icons li a {
+	color: #333;
+	font-size: 20px;
+  }
+  
+  p {
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+  }
+  .line{
+	width: 80rem;
+	height: 3px;
+	background-color: rgba(0, 0, 0, 0.507);
+	margin-left: -15rem;
+  }
+  
+  
